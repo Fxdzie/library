@@ -1,0 +1,50 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: rgb(150, 150, 150);
+    height: 100vh;
+}
+
+.welcome{
+    display: grid;
+    justify-self: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-size: 2vw;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 2px 2px grey;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(50px,1fr));
+    gap: 15px;
+    margin: 5vh 5vw;
+    background-color: white;
+    justify-items: center;
+    padding: 5vh 5vw;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgb(110, 110, 110);
+}
+
+.container > .book{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 3vh 2vw;
+    border-radius: 16px;
+    box-shadow: 0 2px 2px grey;
+    text-align: center;
+}
+
+.title{
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+
+.author{
+
+}
+
