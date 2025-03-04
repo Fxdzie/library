@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="welcome">Welcome to your library!</div>
-    <dialog>
-        <form>
+    <dialog class="dialog">
+        <form action="" id="form">
             <p>Let's add a new book</p>
 
             <label for="author">Author</label>
@@ -36,7 +36,7 @@
             </fieldset>
 
             <button type="submit" formmethod="post">Add book</button>
-            <button type="reset">Reset</button>
+            <button type="reset" class="reset">Reset</button>
             <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>Cancel</button>
             
         </form>
