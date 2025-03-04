@@ -8,6 +8,39 @@
 </head>
 <body>
     <div class="welcome">Welcome to your library!</div>
+    <dialog>
+        <form>
+            <p>Let's add a new book</p>
+
+            <label for="author">Author</label>
+            <input type="text" id="author" required>
+
+            <label for="title">Title</label>
+            <input type="text" id="title" required>
+
+            <label for="pages">Number of pages</label>
+            <input type="number" id="pages" required>
+
+            <fieldset>
+                <legend>Have you read this book?</legend>
+                
+                <div class="radio">
+                    <label for="read">Has been read</label>
+                    <input type="radio" id="read" name="read">
+                </div>
+
+                <div class="radio">
+                    <label for="not-read">Not read yet</label>
+                    <input type="radio" id="not-read" name="read" checked>
+                </div>
+            </fieldset>
+
+            <button type="submit" formmethod="post">Add book</button>
+            <button type="reset">Reset</button>
+            <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>Cancel</button>
+            
+        </form>
+    </dialog>
     <button class="new-book">Add a New Book</button>
     <div class="container"></div>
     <script src="script.js"></script>
