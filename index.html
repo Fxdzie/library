@@ -10,34 +10,49 @@
     <div class="welcome">Welcome to your library!</div>
     <dialog class="dialog">
         <form action="" id="form">
-            <p>Let's add a new book</p>
+            <div class="form-title">
+                <p>Let's add a new book</p>
+                <div>
+                    <button type="submit" aria-label="close" formmethod="dialog" formnovalidate id="close">Cancel</button>
+                </div>
+            </div>
 
-            <label for="author">Author</label>
-            <input type="text" id="author" required>
-
-            <label for="title">Title</label>
-            <input type="text" id="title" required>
-
-            <label for="pages">Number of pages</label>
+            <div class="author-div">
+                <label for="author">Author</label>
+                <input type="text" id="author" required>
+            </div>
+            
+            <div class="title-div">
+                <label for="title">Title</label>
+                <input type="text" id="title" required>
+            </div>
+            
+            <div class="pages-div">
+                <label for="pages">Number of pages</label>
             <input type="number" id="pages" required>
-
+            </div>
+            
             <fieldset>
                 <legend>Have you read this book?</legend>
                 
                 <div class="radio">
                     <label for="read">Has been read</label>
-                    <input type="radio" id="read" name="read">
+                    <input type="radio" id="read" name="read" value="read">
                 </div>
 
                 <div class="radio">
                     <label for="not-read">Not read yet</label>
-                    <input type="radio" id="not-read" name="read" checked>
+                    <input type="radio" id="not-read" name="read" checked value="not read">
                 </div>
             </fieldset>
 
-            <button type="submit" formmethod="post" id="sub">Add book</button>
-            <button type="reset" class="reset">Reset</button>
-            <button type="submit" aria-label="close" formmethod="dialog" formnovalidate id="close">Cancel</button>
+            
+            <div class="bottom-btns">
+                <button type="submit" formmethod="post" id="sub">Add book</button>
+                <button type="reset" class="reset">Reset</button>
+            </div>
+            
+            
             
         </form>
     </dialog>
