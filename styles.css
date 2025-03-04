@@ -3,7 +3,10 @@ body{
     padding:0;
     box-sizing: border-box;
     font-family: sans-serif;
-    background-color: rgb(150, 150, 150);
+    background-image: url(images/giammarco-boscaro-zeH-ljawHtg-unsplash.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
 }
 
@@ -12,7 +15,7 @@ body{
     justify-self: center;
     padding-top: 3vh;
     padding-bottom: 3vh;
-    font-size: 2vw;
+    font-size: 4vw;
     color: rgb(255, 255, 255);
     text-shadow: 0 2px 2px grey;
 }
@@ -22,11 +25,9 @@ body{
     grid-template-columns: repeat(auto-fit,minmax(50px,1fr));
     gap: 15px;
     margin: 5vh 5vw;
-    background-color: white;
     justify-items: center;
     padding: 5vh 5vw;
     border-radius: 18px;
-    box-shadow: 0 2px 8px rgb(110, 110, 110);
 }
 
 .container > .book{
@@ -37,6 +38,7 @@ body{
     border-radius: 16px;
     box-shadow: 0 2px 2px grey;
     text-align: center;
+    background-color: white;
 }
 
 .title{
@@ -44,7 +46,133 @@ body{
     font-weight: 700;
 }
 
-.author{
+.new-book{
+    display: grid;
+    justify-self: center;
+    border-radius: 15px;
+    border: none;
+    height: 10vh;
+    width: 10vw;
+    color: white;
+    justify-items: center;
+    align-items: center;
+    
+    background-color: rgb(221, 191, 149);
+    font-size: 1.5vw;
+}
 
+.new-book:hover{
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    box-shadow: none;
+}
+
+dialog{
+    border-radius: 20px;
+    border: none;
+    padding: 3vh 2vw;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.author-div,.title-div,.pages-div{
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-title{
+    display: flex;
+    align-items: center;
+    gap: 300px;
+}
+
+.form-title > p{
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: rgb(221, 191, 149);
+}
+
+#close,#sub,.reset,.change,.remove{
+    display: grid;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(221, 191, 149);
+    color: white;
+    justify-items: center;
+    align-items: center;
+    font-size: 1vw;
+    box-shadow: 0 1px 1px rgb(174, 174, 174);
+}
+
+#close,.reset{
+    height: 5vh;
+    width: 5vw;
+}
+
+.change,.remove{
+    height: 7vh;
+    width: 10vw;
+}
+
+#sub{
+    height: 5vh;
+    width: 8vw;
+}
+
+.bottom-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+form > div > label{
+    padding-bottom: 5px;
+}
+
+input[type="text"],input[type="number"]{
+    border-radius: 15px;
+    border: 1px solid grey;
+    width: 70%;
+    height: 5vh;
+}
+
+fieldset{
+    display: flex;
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 10px 10px;
+    gap: 50px;
+}
+
+legend{
+    border-radius: 15px;
+}
+
+input[type="radio"]{
+    appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+
+  position: relative;
+    accent-color: rgb(221, 191, 149);
+}
+input[type="radio"]:checked{
+    border: 6px solid rgb(221, 191, 149);
 }
 
