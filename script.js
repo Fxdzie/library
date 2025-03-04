@@ -4,6 +4,8 @@ const newBookButton = document.querySelector(".new-book");
 const dialog = document.querySelector(".dialog");
 const resetButton = document.querySelector(".reset");
 const bookForm = document.querySelector("#form");
+const closeButton = document.querySelector("#close");
+const submitButton = document.querySelector("#sub");
 
 function Book(title,author,pages,haveRead){
     this.title = title;
@@ -20,6 +22,12 @@ function Book(title,author,pages,haveRead){
         return title + " by " + author + ", " + pages+ " pages, " + readOrNot;
     };
 }
+
+const refresh = ()=>{
+    while(container.firstChild){
+        container.removeChild(container.firstChild);
+    }
+};
 
 function addBookToLibrary(title,author,pages,haveRead){
     const book = new Book(title,author,pages,haveRead);
@@ -55,14 +63,22 @@ newBookButton.addEventListener("click",()=>{
     dialog.showModal();
 });
 
-bookForm.addEventListener("submit",(e)=>{
+submitButton.addEventListener("click",(e)=>{
     e.preventDefault();
     const title = document.querySelector("#title").value;
     const author = document.querySelector("#author").value;
     const pages = document.querySelector("#pages").value;
+    console.log(title);
     const haveRead = document.querySelector('input[name="read"]:checked').value;
     addBookToLibrary(title,author,pages,haveRead);
+    refresh();
     displayBooks();
     dialog.close();
+    title='';
+    author='';
+    pages ='';
 });
+
+
+
 displayBooks();
